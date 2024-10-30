@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Recompensas - Site Oficial</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Cabeçalho da página -->
+  <div class="container-header">
+    <header>
+      <img src="./imgs/JbpqKS8514621.webp" alt="" srcset="">
+      <div class="container-balance">
+        <div class="container-title-balance">
+          <div>
+            <p>Seu saldo <br> atual</p>
+          </div>
+        </div>
+        <div class="container-current-balance">
+          <div>
+            <p id="current-balance">R$ 90,00</p>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- conteúdo da página -->
+  <section class="content">
+    <div id="screen-01" class="content-container">
+      <p class="text-center">O YouTube precisa de você para melhorar a experiência dos seus anúncios, respondendo
+        algumas perguntas que ajudam os anunciantes.</p>
+
+      <div class="sub-content">
+        <p>Parabéns, você foi selecionado(a)!</p>
+
+        <p>Você acaba de receber acesso à nova ferramenta do YouTube para responder à pesquisa de anunciantes.</p>
+
+        <p>Aproveite, você já ganhou R$90!</p>
+
+        <p>Responda 3 perguntas e realize seu primeiro saque em minutos!</p>
+
+        <p>Clique no botão abaixo para iniciar</p>
+
+        <button onclick="handleStartQuiz()">
+          CLIQUE AQUI E COMECE!
+          <img src="./imgs/arrow-right.svg">
+        </button>
+
+      </div>
+
+    </div>
+
+    <div id="screen-02" class="quiz-container none">
+      <img src="https://media.atomicatpages.com/u/iYz59eyFzaenIfuy4CxMaLLtrDg1/Pictures/noz1p/KvHLeh2264270.gif" alt=""
+        loading="lazy" decoding="async" class="image-quiz">
+
+      <div class="container-info-quiz">
+        <p id="announced-quiz">Qual dessas marcas de celular você escolheria para comprar hoje?</p>
+        <p>Toque no quadrado e selecione sua marca de preferência ⬇️</p>
+      </div>
+
+      <div id="options-quiz" class="container-options">
+
+      </div>
+
+      <button class="button-quiz" disabled="false" onclick="handleAlterQuiz()" id="button-send-quiz">Enviar</button>
+    </div>
+
+    <div id="screen-03" class="content-container none">
+      <div class="sub-content">
+        <p class="text-center">Você completou suas três primeiras pesquisas! Agora, está pronto para fazer seu primeiro
+          saque!</p>
+
+
+        <div>
+          <h1 class="text-center">Parabéns! 🎉</h1>
+          <p class="text-center">Para realizar seu saque, assista a um vídeo de 4 minutos!</p>
+          <p class="text-center">Clique no botão abaixo para iniciar<br></p>
+        </div>
+
+        <button onclick="handleRedirectVideo()">
+          Assita o vídeo agora!
+          <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle-play" class="svg-inline--fa fa-circle-play " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z"></path></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="screen-04" class="none">
+      <div  class="container-finnaly">
+        <p class="title-finally">Falta pouco para você resgatar o saldo feito em suas pesquisa</p>
+        <p class="text-finally">Assista ao vídeo abaixo e entenda como sacar ⬇️</p>
+        <a href="https://pay.kirvano.com/9d265770-ca54-4fe2-8895-9ffb9871be10?utm_source=organicjLj671be20d7ae4675eeba5b095&amp;utm_campaign=rKm-km-rKm&amp;utm_medium=&amp;utm_content=&amp;utm_term=&amp;subid=organicjLj671be20d7ae4675eeba5b095&amp;sid2=rKm-km-rKm&amp;subid2=rKm-km-rKm&amp;subid3=&amp;subid4=&amp;subid5=rKm-km-rKm&amp;xcod=organicjLj671be20d7ae4675eeba5b095hQwK21wXxRrKm-km-rKmhQwK21wXxRhQwK21wXxRhQwK21wXxR&amp;sck=organicjLj671be20d7ae4675eeba5b095hQwK21wXxRrKm-km-rKmhQwK21wXxRhQwK21wXxRhQwK21wXxR"
+       id="394df203-9d06-4106-9dd5-d2e623b2ac7b">QUERO PAGAR A TAXA
+        <img src="./imgs/hand.svg" />
+      </a>
+  
+        <p class="text-finally ">🔊 Por favor, verifique se seu som está ligado</p>
+      </div>
+  
+      <div class="container-facebook">
+        <div class="header-comments-facebook">
+          <p>11 de 3843 comentários</p>
+        </div>
+        <!-- comentário 1 -->
+        <div class="container-comment-facebook">
+          <div>
+            <img class="user-icon-facebook" src="./imgs/sofia-garcia.jpeg" alt="" srcset="">
+          </div>
+          <div>
+            <p class="username-comment-facebook">Sofia García</p>
+            <div class="comment-facebook">
+              <span>Galera, to impressionada!!! Eu assisti o vídeo todo e recebi o acesso à ferramenta. Usei por uns 20
+                minutinhos e já consegui sacar R$277 reais. Indico que assistam o vídeo todo pra receber o acesso à
+                ferramenta também.</span>
+            </div>
+  
+            <div class="cointainer-actions-comment-facebook">
+              <span class="actions-comment-facebook">Curtir</span>
+              <p class="point-facebook">·</p>
+              <span class="actions-comment-facebook">Responder</span>
+              <p class="point-facebook">·</p>
+              <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p class="point-facebook">·</p>
+              <span class="time-comment-facebook">7 m</span>
+            </div>
+  
+            <div class="subcontainer-response-comment-facebook">
+              <div class="container-response-comment-facebook">
+                <div>
+                  <img class="user-icon-facebook" src="./imgs/julia-alvarenga.jpeg" alt="" srcset="">
+                </div>
+                <div>
+                  <div class="username-comment-facebook">Julia alvarenga</div>
+                  <div class="comment-facebook">
+                    <span>Deu certo mesmo amiga?</span>
+                  </div>
+  
+                  <div class="cointainer-actions-comment-facebook">
+                    <span class="actions-comment-facebook">Curtir</span>
+                    <p class="point-facebook">·</p>
+                    <span class="actions-comment-facebook">Responder</span>
+                    <p class="point-facebook">·</p>
+                    <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48"
+                      alt="likes">
+                    <p class="point-facebook">·</p>
+                    <span class="time-comment-facebook">7 m</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="container-response-comment-facebook">
+              <div>
+                <img class="user-icon-facebook" src="./imgs/sofia-garcia.jpeg" alt="" srcset="">
+              </div>
+              <div>
+                <div class="username-comment-facebook">Sofia García</div>
+                <div class="comment-facebook">
+                  <span>Sim amigaaaaa, assiste o vídeo até o final, tu vai ver que é bem fácinho de fazer o saque e cai
+                    rapídinho</span>
+                </div>
+  
+                <div class="cointainer-actions-comment-facebook">
+                  <span class="actions-comment-facebook">Curtir</span>
+                  <p class="point-facebook">·</p>
+                  <span class="actions-comment-facebook">Responder</span>
+                  <p class="point-facebook">·</p>
+                  <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48"
+                    alt="likes">
+                  <p class="point-facebook">·</p>
+                  <span class="time-comment-facebook">7 m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Comentário 2 -->
+        <div class="container-comment-facebook">
+          <div>
+            <img class="user-icon-facebook" src="./imgs/carlos-dal-bolo.jpeg" alt="" srcset="">
+          </div>
+          <div>
+            <p class="username-comment-facebook">Carlos Dal Belo</p>
+            <div class="comment-facebook">
+              <span>Estou usando essa nova ferramenta do Youtube faz 3 meses e desde então nunca mais parei de receber PIX
+                todos os dias só para ajudar o Youtube a analisar os Anúncios que ele coloca nos sites parceiros dele, to
+                ganhando uns 200 reais por dia no mínimo.</span>
+            </div>
+  
+            <div class="cointainer-actions-comment-facebook">
+              <span class="actions-comment-facebook">Curtir</span>
+              <p class="point-facebook">·</p>
+              <span class="actions-comment-facebook">Responder</span>
+              <p class="point-facebook">·</p>
+              <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p class="point-facebook">·</p>
+              <span class="time-comment-facebook">7 m</span>
+            </div>
+          </div>
+        </div>
+        <!-- comentário 3  -->
+        <div class="container-comment-facebook">
+          <div>
+            <img class="user-icon-facebook" src="./imgs/bernado-torres.jpeg" alt="" srcset="">
+          </div>
+          <div>
+            <p class="username-comment-facebook">Bernardo Torres</p>
+            <div class="comment-facebook">
+              <span>To ganhando tanto PIX do Youtube que vou consegui comprar minha motinho nova, testem galera pq
+                realmente funciona...</span>
+            </div>
+  
+            <div class="cointainer-actions-comment-facebook">
+              <span class="actions-comment-facebook">Curtir</span>
+              <p class="point-facebook">·</p>
+              <span class="actions-comment-facebook">Responder</span>
+              <p class="point-facebook">·</p>
+              <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p class="point-facebook">·</p>
+              <span class="time-comment-facebook">7 m</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- comentário 4 -->
+        <div class="container-comment-facebook">
+          <div>
+            <img class="user-icon-facebook" src="./imgs/hanna-larissa.jpeg" alt="" srcset="">
+          </div>
+          <div>
+            <p class="username-comment-facebook">Hanna Larissa</p>
+            <div class="comment-facebook">
+              <span>Alguém aqui que testou e deu certo?</span>
+            </div>
+  
+            <div class="cointainer-actions-comment-facebook">
+              <span class="actions-comment-facebook">Curtir</span>
+              <p class="point-facebook">·</p>
+              <span class="actions-comment-facebook">Responder</span>
+              <p class="point-facebook">·</p>
+              <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p class="point-facebook">·</p>
+              <span class="time-comment-facebook">7 m</span>
+            </div>
+  
+            <div class="subcontainer-response-comment-facebook">
+              <div class="container-response-comment-facebook">
+                <div>
+                  <img class="user-icon-facebook" src="./imgs/martina-lopez.jpeg" alt="" srcset="">
+                </div>
+                <div>
+                  <div class="username-comment-facebook">Sofia García</div>
+                  <div class="comment-facebook">
+                    <span>Oi moça, assiste até o final do vídeo, eu assisti o dindin caiu na minha conta rapidinho,
+                      ganhei 420 reais só hoje!</span>
+                  </div>
+  
+                  <div class="cointainer-actions-comment-facebook">
+                    <span class="actions-comment-facebook">Curtir</span>
+                    <p class="point-facebook">·</p>
+                    <span class="actions-comment-facebook">Responder</span>
+                    <p class="point-facebook">·</p>
+                    <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48"
+                      alt="likes">
+                    <p class="point-facebook">·</p>
+                    <span class="time-comment-facebook">7 m</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+        <!-- comentário 5 -->
+        <div class="container-comment-facebook">
+          <div>
+            <img class="user-icon-facebook" src="./imgs/hanna-larissa.jpeg" alt="" srcset="">
+          </div>
+          <div>
+            <p class="username-comment-facebook">Hanna Larissa</p>
+            <div class="comment-facebook">
+              <span>
+                Olá a todos, eu super recomendo essa nova ferramenta do Youtube, está muito perfeito,
+                o PIX cai em instantes na conta, meu Deusssss, Maravilhoosoooo, obrigado Youtube 🤑💰</span>
+            </div>
+  
+            <div class="cointainer-actions-comment-facebook">
+              <span class="actions-comment-facebook">Curtir</span>
+              <p class="point-facebook">·</p>
+              <span class="actions-comment-facebook">Responder</span>
+              <p class="point-facebook">·</p>
+              <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p class="point-facebook">·</p>
+              <span class="time-comment-facebook">7 m</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+  </section>
+
+
+  <!-- Fim da página -->
+  <footer>
+    <div>
+      <img src="./imgs/KzegMy9299382.webp" alt="" srcset="">
+      <p>Copyright <span class="atomicat-ano">2024</span> - Youtube Recompensas ©</p>
+      <p>Todos os Direitos Reservados</p>
+      <p>Termos de Serviço do YouTube</p>
+      <p>Políticas de Privacidade</p>
+      <p>
+        Este site não faz parte do site do Facebook ou do Meta Inc. </br> Além disso, este site NÃO é endossado pelo
+        Facebook de forma alguma. FACEBOOK é uma marca registrada da FACEBOOK, Inc.
+      </p>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
