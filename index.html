@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./imgs/icon.webp" type="image/x-icon">
   <title>Youtube Recompensas - Site Oficial</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,15 +12,23 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-
+  <!-- Link para o Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <!--  -->
+  <style>
+    .elementor-element:has(#smartplayer) {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
   <!-- Cabeçalho da página -->
   <div class="container-header">
-    <header>
+    <header id="header">
       <img src="./imgs/JbpqKS8514621.webp" alt="" srcset="">
-      <div class="container-balance">
+      <div id="current-balance-header" class="container-balance">
         <div class="container-title-balance">
           <div>
             <p>Seu saldo <br> atual</p>
@@ -35,7 +44,7 @@
   </div>
 
   <!-- conteúdo da página -->
-  <section class="content">
+  <section id="content" class="content">
     <div id="screen-01" class="content-container">
       <p class="text-center">O YouTube precisa de você para melhorar a experiência dos seus anúncios, respondendo
         algumas perguntas que ajudam os anunciantes.</p>
@@ -89,25 +98,55 @@
         </div>
 
         <button onclick="handleRedirectVideo()">
-          Assita o vídeo agora!
-          <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle-play" class="svg-inline--fa fa-circle-play " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z"></path></svg>
+          Assista o vídeo agora!
+          <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle-play"
+            class="svg-inline--fa fa-circle-play " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+              d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z">
+            </path>
+          </svg>
         </button>
       </div>
 
     </div>
 
     <div id="screen-04" class="none">
-      <div  class="container-finnaly">
+      <div class="container-finnaly">
         <p class="title-finally">Falta pouco para você resgatar o saldo feito em suas pesquisa</p>
         <p class="text-finally">Assista ao vídeo abaixo e entenda como sacar ⬇️</p>
-        <a href="https://pay.kirvano.com/9d265770-ca54-4fe2-8895-9ffb9871be10?utm_source=organicjLj671be20d7ae4675eeba5b095&amp;utm_campaign=rKm-km-rKm&amp;utm_medium=&amp;utm_content=&amp;utm_term=&amp;subid=organicjLj671be20d7ae4675eeba5b095&amp;sid2=rKm-km-rKm&amp;subid2=rKm-km-rKm&amp;subid3=&amp;subid4=&amp;subid5=rKm-km-rKm&amp;xcod=organicjLj671be20d7ae4675eeba5b095hQwK21wXxRrKm-km-rKmhQwK21wXxRhQwK21wXxRhQwK21wXxR&amp;sck=organicjLj671be20d7ae4675eeba5b095hQwK21wXxRrKm-km-rKmhQwK21wXxRhQwK21wXxRhQwK21wXxR"
-       id="394df203-9d06-4106-9dd5-d2e623b2ac7b">QUERO PAGAR A TAXA
-        <img src="./imgs/hand.svg" />
-      </a>
-  
+
+        <div id="vid_66d68321050056000b655173" style="position:relative;width:100%;padding: 56.25% 0 0;">
+          <img id="thumb_66d68321050056000b655173"
+            src="https://images.converteai.net/57aa8174-331c-4a9f-84e4-e6390429fc62/players/66d68321050056000b655173/thumbnail.jpg"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
+          <div id="backdrop_66d68321050056000b655173"
+            style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);">
+          </div>
+        </div>
+
+        
+
+        <div id="go-redirect-kirvano">
+          <a href="https://pay.kirvano.com/9d265770-ca54-4fe2-8895-9ffb9871be10?utm_source=organicjLj671be20d7ae4675eeba5b095&amp;utm_campaign=rKm-km-rKm&amp;utm_medium=&amp;utm_content=&amp;utm_term=&amp;subid=organicjLj671be20d7ae4675eeba5b095&amp;sid2=rKm-km-rKm&amp;subid2=rKm-km-rKm&amp;subid3=&amp;subid4=&amp;subid5=rKm-km-rKm&amp;xcod=organicjLj671be20d7ae4675eeba5b095hQwK21wXxRrKm-km-rKmhQwK21wXxRhQwK21wXxRhQwK21wXxR&amp;sck=organicjLj671be20d7ae4675eeba5b095hQwK21wXxRrKm-km-rKmhQwK21wXxRhQwK21wXxRhQwK21wXxR"
+            onclick="goPay()">QUERO PAGAR A TAXA
+            <img src="./imgs/hand.svg" />
+          </a>
+        </div>
         <p class="text-finally ">🔊 Por favor, verifique se seu som está ligado</p>
       </div>
-  
+
+      <div id="toast" class="toast">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff"
+          class="place bi bi-patch-check-fill" viewBox="0 0 16 16">
+          <path
+            d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z">
+          </path>
+        </svg>
+        <span id="toast-message">
+
+        </span>
+      </div>
+
       <div class="container-facebook">
         <div class="header-comments-facebook">
           <p>11 de 3843 comentários</p>
@@ -120,11 +159,12 @@
           <div>
             <p class="username-comment-facebook">Sofia García</p>
             <div class="comment-facebook">
-              <span>Galera, to impressionada!!! Eu assisti o vídeo todo e recebi o acesso à ferramenta. Usei por uns 20
+              <span>Galera, to impressionada!!! Eu assisti o vídeo todo e recebi o acesso à ferramenta. Usei por uns
+                20
                 minutinhos e já consegui sacar R$277 reais. Indico que assistam o vídeo todo pra receber o acesso à
                 ferramenta também.</span>
             </div>
-  
+
             <div class="cointainer-actions-comment-facebook">
               <span class="actions-comment-facebook">Curtir</span>
               <p class="point-facebook">·</p>
@@ -134,7 +174,7 @@
               <p class="point-facebook">·</p>
               <span class="time-comment-facebook">7 m</span>
             </div>
-  
+
             <div class="subcontainer-response-comment-facebook">
               <div class="container-response-comment-facebook">
                 <div>
@@ -145,7 +185,7 @@
                   <div class="comment-facebook">
                     <span>Deu certo mesmo amiga?</span>
                   </div>
-  
+
                   <div class="cointainer-actions-comment-facebook">
                     <span class="actions-comment-facebook">Curtir</span>
                     <p class="point-facebook">·</p>
@@ -153,13 +193,14 @@
                     <p class="point-facebook">·</p>
                     <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48"
                       alt="likes">
+                    <p id="count-like">2</p>
                     <p class="point-facebook">·</p>
-                    <span class="time-comment-facebook">7 m</span>
+                    <span class="time-comment-facebook">5 m</span>
                   </div>
                 </div>
               </div>
             </div>
-  
+
             <div class="container-response-comment-facebook">
               <div>
                 <img class="user-icon-facebook" src="./imgs/sofia-garcia.jpeg" alt="" srcset="">
@@ -167,10 +208,11 @@
               <div>
                 <div class="username-comment-facebook">Sofia García</div>
                 <div class="comment-facebook">
-                  <span>Sim amigaaaaa, assiste o vídeo até o final, tu vai ver que é bem fácinho de fazer o saque e cai
+                  <span>Sim amigaaaaa, assiste o vídeo até o final, tu vai ver que é bem fácinho de fazer o saque e
+                    cai
                     rapídinho</span>
                 </div>
-  
+
                 <div class="cointainer-actions-comment-facebook">
                   <span class="actions-comment-facebook">Curtir</span>
                   <p class="point-facebook">·</p>
@@ -178,14 +220,15 @@
                   <p class="point-facebook">·</p>
                   <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48"
                     alt="likes">
+                  <p id="count-like">3</p>
                   <p class="point-facebook">·</p>
-                  <span class="time-comment-facebook">7 m</span>
+                  <span class="time-comment-facebook">4 m</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
+
         <!-- Comentário 2 -->
         <div class="container-comment-facebook">
           <div>
@@ -194,19 +237,22 @@
           <div>
             <p class="username-comment-facebook">Carlos Dal Belo</p>
             <div class="comment-facebook">
-              <span>Estou usando essa nova ferramenta do Youtube faz 3 meses e desde então nunca mais parei de receber PIX
-                todos os dias só para ajudar o Youtube a analisar os Anúncios que ele coloca nos sites parceiros dele, to
+              <span>Estou usando essa nova ferramenta do Youtube faz 3 meses e desde então nunca mais parei de receber
+                PIX
+                todos os dias só para ajudar o Youtube a analisar os Anúncios que ele coloca nos sites parceiros dele,
+                to
                 ganhando uns 200 reais por dia no mínimo.</span>
             </div>
-  
+
             <div class="cointainer-actions-comment-facebook">
               <span class="actions-comment-facebook">Curtir</span>
               <p class="point-facebook">·</p>
               <span class="actions-comment-facebook">Responder</span>
               <p class="point-facebook">·</p>
               <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p id="count-like">12</p>
               <p class="point-facebook">·</p>
-              <span class="time-comment-facebook">7 m</span>
+              <span class="time-comment-facebook">15 m</span>
             </div>
           </div>
         </div>
@@ -221,19 +267,20 @@
               <span>To ganhando tanto PIX do Youtube que vou consegui comprar minha motinho nova, testem galera pq
                 realmente funciona...</span>
             </div>
-  
+
             <div class="cointainer-actions-comment-facebook">
               <span class="actions-comment-facebook">Curtir</span>
               <p class="point-facebook">·</p>
               <span class="actions-comment-facebook">Responder</span>
               <p class="point-facebook">·</p>
               <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p id="count-like">15</p>
               <p class="point-facebook">·</p>
-              <span class="time-comment-facebook">7 m</span>
+              <span class="time-comment-facebook">21 m</span>
             </div>
           </div>
         </div>
-  
+
         <!-- comentário 4 -->
         <div class="container-comment-facebook">
           <div>
@@ -244,29 +291,32 @@
             <div class="comment-facebook">
               <span>Alguém aqui que testou e deu certo?</span>
             </div>
-  
+
             <div class="cointainer-actions-comment-facebook">
               <span class="actions-comment-facebook">Curtir</span>
               <p class="point-facebook">·</p>
               <span class="actions-comment-facebook">Responder</span>
               <p class="point-facebook">·</p>
+
               <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p id="count-like">17</p>
+
               <p class="point-facebook">·</p>
-              <span class="time-comment-facebook">7 m</span>
+              <span class="time-comment-facebook">30 m</span>
             </div>
-  
+
             <div class="subcontainer-response-comment-facebook">
               <div class="container-response-comment-facebook">
                 <div>
                   <img class="user-icon-facebook" src="./imgs/martina-lopez.jpeg" alt="" srcset="">
                 </div>
                 <div>
-                  <div class="username-comment-facebook">Sofia García</div>
+                  <div class="username-comment-facebook">Martina Lopez</div>
                   <div class="comment-facebook">
                     <span>Oi moça, assiste até o final do vídeo, eu assisti o dindin caiu na minha conta rapidinho,
                       ganhei 420 reais só hoje!</span>
                   </div>
-  
+
                   <div class="cointainer-actions-comment-facebook">
                     <span class="actions-comment-facebook">Curtir</span>
                     <p class="point-facebook">·</p>
@@ -274,13 +324,14 @@
                     <p class="point-facebook">·</p>
                     <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48"
                       alt="likes">
+                    <p id="count-like">2</p>
                     <p class="point-facebook">·</p>
-                    <span class="time-comment-facebook">7 m</span>
+                    <span class="time-comment-facebook">22 h</span>
                   </div>
                 </div>
               </div>
             </div>
-  
+
           </div>
         </div>
         <!-- comentário 5 -->
@@ -295,25 +346,53 @@
                 Olá a todos, eu super recomendo essa nova ferramenta do Youtube, está muito perfeito,
                 o PIX cai em instantes na conta, meu Deusssss, Maravilhoosoooo, obrigado Youtube 🤑💰</span>
             </div>
-  
+
             <div class="cointainer-actions-comment-facebook">
               <span class="actions-comment-facebook">Curtir</span>
               <p class="point-facebook">·</p>
               <span class="actions-comment-facebook">Responder</span>
               <p class="point-facebook">·</p>
               <img class="like-icon-facebook" src="https://media.atomicatpages.com/p/fblike.png?height=48" alt="likes">
+              <p id="count-like">23</p>
               <p class="point-facebook">·</p>
-              <span class="time-comment-facebook">7 m</span>
+              <span class="time-comment-facebook">1 h</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-  
-
   </section>
 
+  <section id="screen-05" class="none">
+    <div class="promotion-current-balance">
+      <h1>Você acaba de ganhar 35% de desconto para pagamento da taxa</h1>
+
+      <h1>Não perca seu Saldo de</h1>
+      <div class="container-current-balancer-promotion">
+        <p id="current-balance">R$ 180,00</p>
+      </div>
+    </div>
+
+    <div class="content-promotion">
+      <p class="promotion-description">
+        Falta pouco para você sacar todo o seu saldo disponível, e caso voce feche ou saia dessa página, perderá todo o
+        seu saldo!
+      </p>
+
+      <p class="promotion-red">Ganhe até R$ 800 todos os dias ajudando Youtube avaliar os anúncios!</p>
+
+      <p class="promotion-black">Você acaba de receber 35% de desconto para adquirir nova ferramenta do Youtube</p>
+
+      <p class="promotion-black">Apenas nessa página</p>
+
+      <p> de <span class="promotion-value-red">R$ 97,00</span> por</p>
+      <span class="promotion-value-green">R$ 57,00</span>
+
+      <a href="https://pay.kirvano.com/be82c3c9-c463-4b85-8604-58481b0620be" class="promotion-value-button">
+        Quero esse desconto agora!
+      </a>
+    </div>
+  </section>
 
   <!-- Fim da página -->
   <footer>
@@ -331,6 +410,8 @@
   </footer>
 
   <script src="./index.js"></script>
+  <script type="text/javascript"
+    id="scr_66d68321050056000b655173"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/57aa8174-331c-4a9f-84e4-e6390429fc62/players/66d68321050056000b655173/player.js", s.async = !0, document.head.appendChild(s); </script>
 </body>
 
 </html>
